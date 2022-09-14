@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 function Navbar() {
     return (
         <nav>
-            <NavLink to='/page1'>
+            <NavLink to='/user-page'>
                 PAGE1
             </NavLink>
             <NavLink to='/page2'>
