@@ -1,9 +1,10 @@
-import './Header.css'
+import './Header.css';
+import logo4 from '../../assets/images/logo4.png';
 
 function Header() {
     return (
         <header>
-            LOGO
+            <img src={logo4} alt='logo1' />
         </header>
     )
 }
