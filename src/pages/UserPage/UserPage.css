@@ -1,3 +1,28 @@
 @media (min-width: 350px) and (max-width: 990px){
-    
-}
+    div{
+        width: 100%;
+        height: 5vh;
+        /* display: flex; */
+        align-items: center;
+        background-color: rgb(78, 90, 117);
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+    h1{
+        background-color: rgb(159, 211, 211);
+        width: 50%;
+        height: 30vh;
+       
+    }
+    h2{
+       background-color: rgb(159, 211, 211);
+       width: 50%;
+        height: 30vh;
+    }
+    h3{
+       background-color: rgb(159, 211, 211);
+       width: 50%;
+        height: 30vh;
+    }
+};
+

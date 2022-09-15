@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import UserPage from './pages/UserPage/UserPage';
@@ -10,6 +11,7 @@ function App() {
         <Route path='/user-page' element={<UserPage />} />
       </Routes>
     </div>
+    
   );
 }
 

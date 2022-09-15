@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <nav>
             <NavLink to='/user-page'>
-                PAGE1
+                USERPAGE1
             </NavLink>
             <NavLink to='/page2'>
                 PAGE2
