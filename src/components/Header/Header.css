@@ -1,11 +1,17 @@
 @media (min-width: 350px) and (max-width: 990px){
     header {
+        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: bisque;
         width: 100%;
-        height: 10vh;
+        height: 150px;
         color: white;
+    }
+
+    header img {
+        width: 100%;
+        height: 100%;
     }
 }
