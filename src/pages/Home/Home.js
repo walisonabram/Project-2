@@ -10,7 +10,7 @@ function Home() {
       <Header />
       <Navbar />
       <div className="information">
-        <h1>Welcome</h1>
+        <h1>Welcome to My Personal Library</h1>
         <span>
           Hello Reader! I know how hard it is to get organized when you're a book lover, here you'll be able to add books you've read, books you're reading and books you'd like to read!
         </span>

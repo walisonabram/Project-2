@@ -42,4 +42,38 @@
         align-items: center;
         align-content: center;
     }
+
+    .form-container p {
+        text-align: center;
+        color: #654321;
+    }
+
+    .form button {
+        font-size: 15px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(252, 208, 156);
+        border: 1px solid goldenrod;
+        color: #654321;
+    }
+
+    .form input {
+        width: 200px;
+        border-width: 1px;
+        border-color: goldenrod;
+        border-style: solid;
+        padding: 10px;
+        font-size: 15px;
+        background-color: #ffe4c4;
+        color: #654321;
+        box-shadow: inset 0px 0px 30px 0px rgba(101,67,33,.50);
+        font-weight: normal;
+        font-family: sans-serif;
+    }
+    .form input:focus { outline:none; }
+
+    .form label {
+        color: #654321;
+    }
 }
