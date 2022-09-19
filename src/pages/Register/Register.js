@@ -1,11 +1,13 @@
 import Header from "../../components/Header/Header";
 import "./Register.css";
 import Img from "../../assets/images/paper1.png";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Register() {
   return (
     <div className="register-container">
       <Header />
+      <Navbar />
       <div className="form-container">
             <p>Here you can create your Username if you don't have it yet, if you have a Username, just log in!</p>
         <div className="form">

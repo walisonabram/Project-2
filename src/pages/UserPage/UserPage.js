@@ -1,8 +1,12 @@
+import Header from "../../components/Header/Header";
+import Navbar from "../../components/Navbar/Navbar";
 import "./UserPage.css";
 
 function UserPage() {
   return (
     <div className="userPage">
+      <Header />
+      <Navbar />
       <h1>USERPAGE</h1>
       <h3>READ</h3>
       <div className="book-list">
