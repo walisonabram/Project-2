@@ -11,8 +11,8 @@ function Navbar() {
             <NavLink to='/'>
                 <img src={homeIcon} alt='home-icon' />
             </NavLink>
-            <NavLink to='/page2'>
-                All Colections
+            <NavLink to='/allbooks'>
+                All Books
             </NavLink>
         </nav>
     )

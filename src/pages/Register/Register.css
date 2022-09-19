@@ -99,7 +99,7 @@
     }
 
     .img {
-        width: 100%;
+        width: 50%;
     }
 
     .form {
@@ -114,15 +114,15 @@
     }
 
     .form-container p {
-        font-size: 15px;
+        font-size: 25px;
         text-align: center;
         color: #654321;
     }
 
     .form button {
-        font-size: 12px;
-        width: 130px;
-        padding: 5px;
+        font-size: 15px;
+        width: 200px;
+        padding: 10px;
         border-radius: 10px;
         background-color: rgb(252, 208, 156);
         border: 1px solid goldenrod;
@@ -130,12 +130,12 @@
     }
 
     .form input {
-        width: 150px;
+        width: 200px;
         border-width: 1px;
         border-color: goldenrod;
         border-style: solid;
-        padding: 6px;
-        font-size: 15px;
+        padding: 10px;
+        font-size: 20px;
         background-color: #ffe4c4;
         color: #654321;
         box-shadow: inset 0px 0px 30px 0px rgba(101,67,33,.50);
@@ -145,7 +145,7 @@
     .form input:focus { outline:none; }
 
     .form label {
-        font-size: 15px;
+        font-size: 20px;
         color: #654321;
     }
 }
