@@ -10,17 +10,15 @@ function Register() {
       <Navbar />
       <div className="form-container">
             <p>Here you can create your Username if you don't have it yet, if you have a Username, just log in!</p>
-        <div className="form">
             <form className="form">
                 <label htmlFor="createuser">Don't have Username</label>
                 <input type="text" id="createuser" name="createuser" placeholder="@Username" autoFocus required></input>
-                <button type="submit">Create User</button>
+                <button type="submit">Create Username</button>
                 <br />
                 <label htmlFor="login">I have Username</label>
                 <input type="text" id="login" name="login" placeholder="@Username" autoFocus required></input>
                 <button type="submit">Login</button>
             </form>
-        </div>
         <img className="img" src={Img} alt="img-paper" />
       </div>
     </div>
