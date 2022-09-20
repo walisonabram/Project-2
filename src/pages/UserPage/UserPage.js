@@ -1,27 +1,38 @@
+import { useState } from "react";
+import Header from "../../components/Header/Header";
 import "./UserPage.css";
 
+
 function UserPage() {
+  const [books, setBooks] = useState();
+  const trocarLivro = e =>{
+    e.preventDefault();
+    alert("livro trocado para"+ books)
+  }
   return (
     <div className="userPage">
-      <h1>USERPAGE</h1>
+      <Header />
+      <h2>MY LIBRARY</h2>
       <h3>READ</h3>
-      <div className="book-list">
-
-      </div>
+      <div className="book-list"></div>
       <h3>READING</h3>
-      <div className="book-list">
-
-      </div>
+      <div className="book-list"></div>
       <h3>WANT TO READ</h3>
-      <div className="book-list">
-
-      </div>
+      <div className="book-list"></div>
       <div>
-        <select>
-            <option value='read'> livro que eu li</option>
-            <option value='reading'> livro que estou lendo</option>
-            <option value='want-to-read'> livro que eu quero ler</option>
-        </select>
+        <form onSubmit={trocarLivro}>
+          <label>
+            <em>BOOKS: </em>
+          </label>
+          <select name="Book" value={books} onChange= {texto => setBooks(texto.target.value)}>
+            <option value="">Selecione</option>
+            <option value="1">livro que eu li</option>
+            <option value="2"> livro que estou lendo</option>
+            <option value="3">livro que eu quero ler</option>
+          </select>
+          <button type= "submit">CONFIRMAR</button>
+          <alert>livro selecionado</alert>
+        </form>
       </div>
     </div>
   );
