@@ -1,37 +1,47 @@
 import { useState } from "react";
 import Header from "../../components/Header/Header";
+import Navbar from "../../components/Navbar/Navbar";
 import "./UserPage.css";
 
 
 function UserPage() {
   const [books, setBooks] = useState();
-  const trocarLivro = e =>{
+  const changeBook = e =>{
     e.preventDefault();
-    alert("livro trocado para"+ books)
+    alert("book changed for"+ books)
   }
   return (
     <div className="userPage">
       <Header />
-      <h2>MY LIBRARY</h2>
-      <h3>READ</h3>
-      <div className="book-list"></div>
-      <h3>READING</h3>
-      <div className="book-list"></div>
-      <h3>WANT TO READ</h3>
-      <div className="book-list"></div>
+      <Navbar />
+      <h1>MY LIBRARY</h1>
+      <div className="lists-container">
+        <div className="book-list">
+          <h3>READ</h3>
+        </div>
+
+        <div className="book-list">
+          <h3>READING</h3>
+        </div>
+
+        <div className="book-list">
+          <h3>WANT TO READ</h3>
+        </div>
+      </div>
+
       <div>
-        <form onSubmit={trocarLivro}>
+      <form onSubmit={changeBook}>
           <label>
             <em>BOOKS: </em>
           </label>
           <select name="Book" value={books} onChange= {texto => setBooks(texto.target.value)}>
-            <option value="">Selecione</option>
-            <option value="1">livro que eu li</option>
-            <option value="2"> livro que estou lendo</option>
-            <option value="3">livro que eu quero ler</option>
+            <option value="">Select</option>
+            <option value="1">Read Books</option>
+            <option value="2">Books I'm Reading</option>
+            <option value="3">Books I Want to Read</option>
           </select>
-          <button type= "submit">CONFIRMAR</button>
-          <alert>livro selecionado</alert>
+          <button type= "submit">CONFIRM</button>
+          <alert>Book Selected</alert>
         </form>
       </div>
     </div>
