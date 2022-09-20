@@ -1,13 +1,19 @@
+import { useState } from "react";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import "./UserPage.css";
 
 function UserPage() {
+  const [books, setBooks] = useState();
+  const changeBook = e =>{
+    e.preventDefault();
+    alert("book changed for"+ books)
+  }
   return (
     <div className="userPage">
       <Header />
       <Navbar />
-      <h1>USERPAGE</h1>
+      <h1>MY LIBRARY</h1>
       <div className="lists-container">
         <div className="book-list">
           <h3>READ</h3>
@@ -23,11 +29,19 @@ function UserPage() {
       </div>
 
       <div>
-        <select>
-          <option value="read"> livro que eu li</option>
-          <option value="reading"> livro que estou lendo</option>
-          <option value="want-to-read"> livro que eu quero ler</option>
-        </select>
+      <form onSubmit={changeBook}>
+          <label>
+            <em>BOOKS: </em>
+          </label>
+          <select name="Book" value={books} onChange= {texto => setBooks(texto.target.value)}>
+            <option value="">Select</option>
+            <option value="1">Read Books</option>
+            <option value="2">Books I'm Reading</option>
+            <option value="3">Books I Want to Read</option>
+          </select>
+          <button type= "submit">CONFIRM</button>
+          <alert>Book Selected</alert>
+        </form>
       </div>
     </div>
   );
