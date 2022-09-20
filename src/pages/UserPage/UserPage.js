@@ -7,39 +7,27 @@ function UserPage() {
     <div className="userPage">
       <Header />
       <Navbar />
-        <h1>USERPAGE</h1>
+      <h1>USERPAGE</h1>
       <div className="lists-container">
-
-        
-          <div className="book-list">
+        <div className="book-list">
           <h3>READ</h3>
+        </div>
 
-          </div>
-        
-
-        
-          <div className="book-list">
+        <div className="book-list">
           <h3>READING</h3>
+        </div>
 
-          </div>
-        
-
-        
-          <div className="book-list">
+        <div className="book-list">
           <h3>WANT TO READ</h3>
-
-          </div>
-        
-
+        </div>
       </div>
 
-        <div>
-          <select>
-              <option value='read'> livro que eu li</option>
-              <option value='reading'> livro que estou lendo</option>
-              <option value='want-to-read'> livro que eu quero ler</option>
-          </select>
-
+      <div>
+        <select>
+          <option value="read"> livro que eu li</option>
+          <option value="reading"> livro que estou lendo</option>
+          <option value="want-to-read"> livro que eu quero ler</option>
+        </select>
       </div>
     </div>
   );
