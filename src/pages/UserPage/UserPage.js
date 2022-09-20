@@ -31,7 +31,6 @@ function UserPage() {
             <option value="3">livro que eu quero ler</option>
           </select>
           <button type= "submit">CONFIRMAR</button>
-          <alert>livro selecionado</alert>
         </form>
       </div>
     </div>
