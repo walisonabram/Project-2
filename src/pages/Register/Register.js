@@ -4,6 +4,7 @@ import Img from "../../assets/images/paper1.png";
 import Navbar from "../../components/Navbar/Navbar";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Register() {
@@ -56,7 +57,12 @@ function Register() {
                   onChange={(event) => setUser(event.target.value)}
                   value={user}>
                 </input>
-                <button type="submit">Create Username</button>
+                <button type="submit">Create Username</button><br />
+                <label htmlFor="login">Have Username</label>
+                <Link to='/user-page'>
+                  <button>Login</button>
+                </Link>
+
             </form>
         <img className="img" src={Img} alt="img-paper" />
       </div>
