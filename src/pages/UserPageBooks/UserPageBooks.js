@@ -58,7 +58,7 @@ function UserPageBooks() {
           <label>
             <em>ADD BOOK: </em>
           </label>
-          <input value={bookTitle} onChange={(event) => setBookTitle(event.target.value)} type="text" placeholder="Book Tittle" />
+          <input value={bookTitle} onChange={(event) => setBookTitle(event.target.value)} type="text" placeholder="Book Title" />
           {/* <select
             name="Book"
             value={listName}
