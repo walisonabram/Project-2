@@ -8,7 +8,7 @@ function AllBooks() {
             <Header />
             <Navbar />
         </div>
-    )
+    )   
 }
 
 export default AllBooks;
