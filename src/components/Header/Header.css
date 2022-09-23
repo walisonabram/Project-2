@@ -18,6 +18,7 @@
 
 @media (min-width: 991px) {
     header {
+        width: 70%;
         margin: 0;
         display: flex;
         justify-content: center;

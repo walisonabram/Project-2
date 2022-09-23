@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import usersApi from '../../api/ironrest.api'
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
@@ -7,11 +8,7 @@ import "./UserPage.css";
 
 
 function UserPage() {
-  const [books, setBooks] = useState();
-  const changeBook = e =>{
-    e.preventDefault();
-    alert("book added in "+ books)
-  }
+  
   const [username, setUsername] = useState("");
   const [usersList, setUsersList] = useState([]);
 
@@ -48,7 +45,11 @@ function UserPage() {
           onChange={(event) => setUsername(event.target.value)}
           value={username}>
           </input>
-          <button type="submit">Login</button>
+          <button type="submit">Login</button><br />
+          <label>Don't have Username</label>
+          <Link to='/register'>
+           <button>Register</button>
+          </Link>
         </form>
       </div>
       <h1>MY LIBRARY</h1>
@@ -64,22 +65,6 @@ function UserPage() {
         <div className="book-list">
           <h3>WANT TO READ</h3>
         </div>
-      </div>
-
-      <div>
-      <form className="form-select" onSubmit={changeBook}>
-          <label>
-            <em>ADD BOOK: </em>
-          </label>
-          <input type='text' placeholder="Book Tittle"/>
-          <select name="Book" value={books} onChange= {texto => setBooks(texto.target.value)}>
-            <option value="">Select</option>
-            <option value="Read Books">Read Books</option>
-            <option value="Books I'm Reading">Books I'm Reading</option>
-            <option value="Books I Want to Read">Books I Want to Read</option>
-          </select>
-          <button type= "submit">ADD</button>
-        </form>
       </div>
     </div>
   );
