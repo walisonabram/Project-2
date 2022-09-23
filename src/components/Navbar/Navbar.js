@@ -1,15 +1,18 @@
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
-
+import homeIcon from '../../assets/images/teste.png'
 
 function Navbar() {
     return (
         <nav>
             <NavLink to='/user-page'>
-                USERPAGE1
+                My Library
             </NavLink>
-            <NavLink to='/page2'>
-                PAGE2
+            <NavLink to='/'>
+                <img src={homeIcon} alt='home-icon' />
+            </NavLink>
+            <NavLink to='/allbooks'>
+                All Books
             </NavLink>
         </nav>
     )
