@@ -1,6 +1,5 @@
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
-import homeIcon from '../../assets/images/teste.png'
 
 function Navbar() {
     return (
