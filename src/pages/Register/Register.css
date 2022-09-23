@@ -76,7 +76,11 @@
 
 @media (min-width: 991px) {
     .register-container {
-        width: 100%;
+        box-shadow: inset 0px 0px 30px 0px rgba(101,67,33,.50);
+        width: 70%;
+        border: 1px solid goldenrod;
+        margin-left: 15%;
+        margin-right: 15%;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
