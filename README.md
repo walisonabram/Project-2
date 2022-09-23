@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# My Personal Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Magic Book  Logo (1)](https://user-images.githubusercontent.com/107519971/192047598-193a9a56-168b-419b-88fd-546a4303ef47.png)
 
-## Available Scripts
+![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
 
-In the project directory, you can run:
+# Índice 
 
-### `npm start`
+* [My Personal Library](#My-Personal-Library)
+* [Índice](#índice)
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Status do Projeto](#status-do-Projeto)
+* [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
+* [Acesso ao Projeto](#acesso-ao-projeto)
+* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Descrição do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este projeto tem como objetivo ajudar o usuario a organizar os seus livros.
+O usuario se cadastra e salva seu livros lidos, os que esta lendo e os que quer ler.
 
-### `npm test`
+# Status do Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h4 align="center"> 
+    :construction:  Projeto em construção  :construction:
+</h4>
 
-### `npm run build`
+# Funcionalidades e Demonstração da Aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# :hammer: Funcionalidades do projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- # Como fazer login:
+ 
+ https://user-images.githubusercontent.com/107519971/192057612-773b9863-62c0-4ec1-a70b-b46405cac606.mp4
+ 
+ Clique em Let's Start, depois coloque seu nome e crie um nome de usuario, não se esqueça de colocar "@" antes do nome de usuario.
+- Como acrescentar um novo Livro:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Na parte inferior de sua biblioteca, escreva o nome de seu livro e confirme e o livro sera adicionado.
 
-### `npm run eject`
+# 📁 Acesso ao projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Para acessar o site clique neste link, [<sub>MyPersonalLibrary</sub>](https://mypersonallibrary.netlify.app/)**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Pessoas Desenvolvedoras do Projeto
+- Autores
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| [<img src="https://avatars.githubusercontent.com/u/105023579?v=4" width=115><br><sub>Walison Abram</sub>](https://github.com/walisonabram) |  [<img src="https://avatars.githubusercontent.com/u/107519971?v=4" width=115><br><sub>Jandson Costa</sub>](https://github.com/Jandsoncosta55) 
+| :---: | :---: | 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
