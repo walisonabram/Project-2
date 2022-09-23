@@ -10,7 +10,7 @@ function UserPage() {
   const [books, setBooks] = useState();
   const changeBook = e =>{
     e.preventDefault();
-    alert("book changed for"+ books)
+    alert("book added in "+ books)
   }
   const [username, setUsername] = useState("");
   const [usersList, setUsersList] = useState([]);
@@ -67,17 +67,18 @@ function UserPage() {
       </div>
 
       <div>
-      <form onSubmit={changeBook}>
+      <form className="form-select" onSubmit={changeBook}>
           <label>
-            <em>BOOKS: </em>
+            <em>ADD BOOK: </em>
           </label>
+          <input type='text' placeholder="Book Tittle"/>
           <select name="Book" value={books} onChange= {texto => setBooks(texto.target.value)}>
             <option value="">Select</option>
-            <option value="1">Read Books</option>
-            <option value="2">Books I'm Reading</option>
-            <option value="3">Books I Want to Read</option>
+            <option value="Read Books">Read Books</option>
+            <option value="Books I'm Reading">Books I'm Reading</option>
+            <option value="Books I Want to Read">Books I Want to Read</option>
           </select>
-          <button type= "submit">CONFIRM</button>
+          <button type= "submit">ADD</button>
         </form>
       </div>
     </div>
