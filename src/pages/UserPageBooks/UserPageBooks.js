@@ -11,39 +11,31 @@ function UserPageBooks() {
   const [wantReadBooks, setWantReadBooks] = useState();
   const [listName, setListName] = useState('');
   const [bookTitle, setBookTitle] = useState('');
-  const [loading, setLoading] = useState(true);
   const { _id } = useParams();
   
   useEffect(() => {
-    setLoading(true);
     usersApi
       .getUser(_id)
       .then((response) => {
           setReadBooks(response.data.books);
       })
       .catch((error) => window.alert("Error!"))
-      .finally(()=>{
-        setLoading(false);
-      })
-      
+  }, [_id]);
+  useEffect(() => {
     usersApi
       .getUser(_id)
       .then((response) => {
           setReadingBooks(response.data.booksReading);
       })
       .catch((error) => window.alert("Error!"))
-      .finally(()=>{
-        setLoading(false);
-      })
+    }, [_id]);
+  useEffect(() => {
     usersApi
       .getUser(_id)
       .then((response) => {
           setWantReadBooks(response.data.booksWant);
       })
       .catch((error) => window.alert("Error!"))
-      .finally(()=>{
-        setLoading(false);
-      })
   }, [_id]);
 
   const changeBook = (e) => {
@@ -74,10 +66,6 @@ function UserPageBooks() {
   
   return (
     <div className="userPage">
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-      <>
       <Header />
       <Navbar />
       <h1>MY LIBRARY</h1>
@@ -126,8 +114,6 @@ function UserPageBooks() {
           <button type="submit">ADD</button>
         </form>
       </div>
-      </>
-      )}
     </div>
   );
 }
