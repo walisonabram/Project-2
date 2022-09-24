@@ -95,7 +95,7 @@ function UserPageBooks() {
       <div>
         <form className="form-select" onSubmit={changeBook}>
           <label>
-            <em>ADD BOOK: </em>
+            ADD BOOK:
           </label>
           <input value={bookTitle} onChange={(event) => setBookTitle(event.target.value)} type="text" placeholder="Book Title" />
           <select
