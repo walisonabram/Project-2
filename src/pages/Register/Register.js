@@ -19,7 +19,9 @@ function Register() {
         const body = {
             name: name,
             username: user,
-            books: []
+            books: [],
+            booksReading: [],
+            booksWant: []
         }
 
         axios
