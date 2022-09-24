@@ -20,16 +20,12 @@ function UserPageBooks() {
           setReadBooks(response.data.books);
       })
       .catch((error) => window.alert("Error!"))
-  }, [_id]);
-  useEffect(() => {
     usersApi
       .getUser(_id)
       .then((response) => {
           setReadingBooks(response.data.booksReading);
       })
       .catch((error) => window.alert("Error!"))
-    }, [_id]);
-  useEffect(() => {
     usersApi
       .getUser(_id)
       .then((response) => {
