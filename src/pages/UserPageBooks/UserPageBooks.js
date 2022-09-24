@@ -6,64 +6,53 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./UserPageBooks.css";
 
 function UserPageBooks() {
-  const [readBooks, setReadBooks] = useState();
-  const [readingBooks, setReadingBooks] = useState();
-  const [wantReadBooks, setWantReadBooks] = useState();
-  const [listName, setListName] = useState('');
-  const [bookTitle, setBookTitle] = useState('');
+  const [readBooks, setReadBooks] = useState([]);
+  const [readingBooks, setReadingBooks] = useState([]);
+  const [wantReadBooks, setWantReadBooks] = useState([]);
+  const [listName, setListName] = useState("");
+  const [bookTitle, setBookTitle] = useState("");
   const { _id } = useParams();
-  
+
   useEffect(() => {
     usersApi
       .getUser(_id)
       .then((response) => {
-          setReadBooks(response.data.books);
+        setReadBooks(response.data.books);
+        setReadingBooks(response.data.booksReading);
+        setWantReadBooks(response.data.booksWant);
       })
-      .catch((error) => window.alert("Error!"))
-  }, [_id]);
-  useEffect(() => {
-    usersApi
-      .getUser(_id)
-      .then((response) => {
-          setReadingBooks(response.data.booksReading);
-      })
-      .catch((error) => window.alert("Error!"))
-    }, [_id]);
-  useEffect(() => {
-    usersApi
-      .getUser(_id)
-      .then((response) => {
-          setWantReadBooks(response.data.booksWant);
-      })
-      .catch((error) => window.alert("Error!"))
+      .catch((error) => window.alert("Error!"));
   }, [_id]);
 
   const changeBook = (e) => {
     e.preventDefault();
-    if (listName === 'Read') {
-      usersApi.addReadBook(bookTitle, _id)
-          .then(() => {
-              setReadBooks([...readBooks, bookTitle])
-              setBookTitle('')
-          })
-          .catch((error) => console.log("Error!", error));
-    } else if (listName === 'Reading') {
-      usersApi.addReadingBook(bookTitle, _id)
-          .then(() => {
-              setReadingBooks([...readingBooks, bookTitle])
-              setBookTitle('')
-          })
-          .catch((error) => console.log("Error!", error));
-    } else if (listName === 'Want') {
-      usersApi.addWantBook(bookTitle, _id)
-          .then(() => {
-              setWantReadBooks([...wantReadBooks, bookTitle])
-              setBookTitle('')
-          })
-          .catch((error) => console.log("Error!", error));
+    if (listName === "Read") {
+      usersApi
+        .addReadBook(bookTitle, _id)
+        .then(() => {
+          setReadBooks([...readBooks, bookTitle]);
+          setBookTitle("");
+        })
+        .catch((error) => console.log("Error!", error));
+    } else if (listName === "Reading") {
+      usersApi
+        .addReadingBook(bookTitle, _id)
+        .then(() => {
+          setReadingBooks([...readingBooks, bookTitle]);
+          setBookTitle("");
+        })
+        .catch((error) => console.log("Error!", error));
+    } else if (listName === "Want") {
+      usersApi
+        .addWantBook(bookTitle, _id)
+        .then(() => {
+          setWantReadBooks([...wantReadBooks, bookTitle]);
+          setBookTitle("");
+        })
+        .catch((error) => console.log("Error!", error));
     }
   };
-  
+
   return (
     <div className="userPage">
       <Header />
@@ -97,10 +86,13 @@ function UserPageBooks() {
 
       <div>
         <form className="form-select" onSubmit={changeBook}>
-          <label>
-            ADD BOOK:
-          </label>
-          <input value={bookTitle} onChange={(event) => setBookTitle(event.target.value)} type="text" placeholder="Book Title" />
+          <label>ADD BOOK:</label>
+          <input
+            value={bookTitle}
+            onChange={(event) => setBookTitle(event.target.value)}
+            type="text"
+            placeholder="Book Title"
+          />
           <select
             name="Book"
             value={listName}
