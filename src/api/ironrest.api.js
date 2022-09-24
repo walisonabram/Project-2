@@ -28,6 +28,28 @@ class IronRestAPI {
             throw error
         }
     }
+    async addReadingBook(bookName, userId) {
+        try {
+            const user = await this.getUser(userId)
+            const userBooks = user.data.booksReading ? [...user.data.booksReading] : []
+            // verificar se o livro já existe no array
+            userBooks.push(bookName)
+            await this.api.put(`/${userId}`, {booksReading: userBooks})
+        } catch (error) {
+            throw error
+        }
+    }
+    async addWantBook(bookName, userId) {
+        try {
+            const user = await this.getUser(userId)
+            const userBooks = user.data.booksWant ? [...user.data.booksWant] : []
+            // verificar se o livro já existe no array
+            userBooks.push(bookName)
+            await this.api.put(`/${userId}`, {booksWant: userBooks})
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 
