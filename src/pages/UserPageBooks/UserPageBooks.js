@@ -11,27 +11,39 @@ function UserPageBooks() {
   const [wantReadBooks, setWantReadBooks] = useState();
   const [listName, setListName] = useState('');
   const [bookTitle, setBookTitle] = useState('');
+  const [loading, setLoading] = useState(true);
   const { _id } = useParams();
   
   useEffect(() => {
+    setLoading(true);
     usersApi
       .getUser(_id)
       .then((response) => {
           setReadBooks(response.data.books);
       })
-      .catch((error) => window.alert("Error!"));
+      .catch((error) => window.alert("Error!"))
+      .finally(()=>{
+        setLoading(false);
+      })
+      
     usersApi
       .getUser(_id)
       .then((response) => {
           setReadingBooks(response.data.booksReading);
       })
-      .catch((error) => window.alert("Error!"));
+      .catch((error) => window.alert("Error!"))
+      .finally(()=>{
+        setLoading(false);
+      })
     usersApi
       .getUser(_id)
       .then((response) => {
           setWantReadBooks(response.data.booksWant);
       })
-      .catch((error) => window.alert("Error!"));
+      .catch((error) => window.alert("Error!"))
+      .finally(()=>{
+        setLoading(false);
+      })
   }, [_id]);
 
   const changeBook = (e) => {
@@ -55,7 +67,6 @@ function UserPageBooks() {
           .then(() => {
               setWantReadBooks([...wantReadBooks, bookTitle])
               setBookTitle('')
-              console.log(wantReadBooks)
           })
           .catch((error) => console.log("Error!", error));
     }

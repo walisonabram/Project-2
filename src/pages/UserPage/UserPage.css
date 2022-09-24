@@ -85,7 +85,7 @@
     text-align: center;
     margin: 0 20px 20px 20px;
     width: 80%;
-    height: 20vh;
+    min-height: 20vh;
     background-color: rgb(252, 208, 156);
     color: #654321;
     border: 1px solid goldenrod;
