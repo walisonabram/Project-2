@@ -74,6 +74,10 @@ function UserPageBooks() {
   
   return (
     <div className="userPage">
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+      <>
       <Header />
       <Navbar />
       <h1>MY LIBRARY</h1>
@@ -122,6 +126,8 @@ function UserPageBooks() {
           <button type="submit">ADD</button>
         </form>
       </div>
+      </>
+      )}
     </div>
   );
 }
